@@ -1,0 +1,60 @@
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+  
+
+div#slider {
+    overflow: hidden;  /* Evita que las imágenes se desborden fuera del contenedor */
+    width: 100%;       /* Asegura que el contenedor ocupa el 100% del ancho */
+    height: 100vh;     /* Asegura que el contenedor ocupe el 100% de la altura de la pantalla (o contenedor padre) */
+  }
+  
+  div#slider figure {
+    position: relative;
+    width: 500%;        /* Ancho total para las 5 imágenes (cada una del 20%) */
+    height: 100vh;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    display: flex;      /* Usa flexbox para asegurar que las imágenes se alineen horizontalmente */
+    animation: 15s slidy infinite ease;
+  }
+  
+  div#slider figure img {
+    width: 100%;        /* Las imágenes ocupan el 100% del ancho del contenedor figure */
+    height: 100%;       /* Las imágenes ocuparán también el 100% de la altura del contenedor */
+    object-fit: cover;  /* Asegura que las imágenes se ajusten manteniendo la relación de aspecto */
+  }
+  
+  /* Animación de deslizamiento */
+  @keyframes slidy {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+  }
+  

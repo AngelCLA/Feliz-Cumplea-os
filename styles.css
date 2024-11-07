@@ -1,13 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic);
 
+
 html,
 body {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 body {
   background: #e2aedd;
+  margin: 0;
+  padding: 0;
 }
 
 #cake {
@@ -103,13 +107,56 @@ body {
 .text {
   color: #6e2594;
   font-family: 'Lato', sans-serif;
-  font-weight: 300;
   font-style:italic;
   text-align: center;
   h1 {
-    font-size: 2em;
+    font-size: 3em;
+    font-weight: 800;
   }
   p {	
-    font-size: 1.5em;
+    margin-top: -0.5em;
+    font-size: 3em;
+    font-weight: 300;
   }
+}
+
+/* ==============================================  Button
+*/
+/* From Uiverse.io by adamgiebl */ 
+.button {
+  align-items: center;
+  appearance: none;
+  background-color: #e2aedd;
+  border-radius: 8px;
+  border-width: 2px;
+  border-color: #6e2594;
+  box-shadow: rgba(83, 109, 254, 0.2) 0 2px 4px, rgba(83, 109, 254, 0.15) 0 7px 13px -3px, #e2aedd 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #6e2594;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 56px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 24px;
+  padding-right: 24px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 20px;
+}
+
+
+.button:active {
+  box-shadow: #e2aedd 0 3px 7px inset;
+  transform: translateY(2px);
 }
