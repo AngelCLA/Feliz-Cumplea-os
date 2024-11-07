@@ -25,10 +25,11 @@ div#slider {
     overflow: hidden;  /* Evita que las imágenes se desborden fuera del contenedor */
     width: 100%;       /* Asegura que el contenedor ocupa el 100% del ancho */
     height: 100vh;     /* Asegura que el contenedor ocupe el 100% de la altura de la pantalla (o contenedor padre) */
-}
+    
+  }
   
 div#slider figure {
-    position: relative;
+    position: -webkit-sticky;
     width: 600%;        /* Ancho total para las 6 imágenes (cada una del 16.666%) */
     height: 100vh;
     margin: 0;
@@ -40,7 +41,7 @@ div#slider figure {
 }
   
 div#slider figure img {
-    width: 100%;        /* Las imágenes ocupan el 100% del ancho del contenedor figure */
+    width: auto;        /* Las imágenes ocupan el 100% del ancho del contenedor figure */
     height: 100%;       /* Las imágenes ocuparán también el 100% de la altura del contenedor */
     object-fit: cover;  /* Asegura que las imágenes se ajusten manteniendo la relación de aspecto */
 }
@@ -58,4 +59,11 @@ div#slider figure img {
     80% { left: -400%; }
     96.666% { left: -400%; }
     100% { left: -500%; }  /* Desplaza hasta la sexta imagen */
+}
+
+
+.swiper-slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cubre el contenedor sin distorsionar el video */
 }

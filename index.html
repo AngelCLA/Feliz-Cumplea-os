@@ -14,10 +14,7 @@
 </head>
 
 <body>
-    <audio id="audio" loop>
-        <source src="lasMananitas.mp3" type="audio/mp3">
-        Tu navegador no soporta la reproducción de audio.
-    </audio>
+    <audio id="audio" src="lasMananitas.mp3"></audio>
     <!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -203,33 +200,26 @@
                     </div>
                     <div class="details">
                         <h4 class="color1">Oyee, tu no eres un fósil! (¡AÚN!)</h2>
-                        <h4 class="color2 margin">¡FELIZ CUMPLEAÑOS!</h3>
-                        <p>Querida Yajana</p>
-                        <p>Hoy celebro el regalo</p>
-                        <p>más hermoso que la vida me dio</p>
-                        <p>Gracias por ser mi inspiración, mi </p>
-                        <p>alegría y mi compañera.</p>
-                        <p>a tu lado siempre encuentro </p>
-                        <p>paz y felicidad.</p>
-                        <p>¿Cómo lo logras? :)</p>
-                        <p class="text-right">Feliz Cumpleaños, hermosa!</p>
-                        <p class="text-right">♥Luis</p>
+                            <h4 class="color2 margin">¡FELIZ CUMPLEAÑOS!</h3>
+                                <p>Querida Yajana</p>
+                                <p>Hoy celebro el regalo</p>
+                                <p>más hermoso que la vida me dio</p>
+                                <p>Gracias por ser mi inspiración, mi </p>
+                                <p>alegría y mi compañera.</p>
+                                <p>a tu lado siempre encuentro </p>
+                                <p>paz y felicidad.</p>
+                                <p>¿Cómo lo logras? :)</p>
+                                <p class="text-right">Feliz Cumpleaños, hermosa!</p>
+                                <p class="text-right">♥Luis</p>
                     </div>
                 </div>
             </div>
             <div class="swiper-slide" style="background: linear-gradient(to right, #e2aedd, #ffb6f8);">
-                <div id="slider">
-                    <figure>
-                    <img src="/img/yajana2.jpeg" alt="">
-                    <img src="/img/yajana3.jpeg" alt="">
-                    <img src="/img/yajana4.jpeg" alt="">
-                    <img src="/img/yajana5.jpeg" alt="">
-                    <img src="/img/yajana6.jpeg" alt="">
-                    <img src="/img/yajana2.jpeg" alt="">
-                    </figure>
-                    </div>
+                <video controls>
+                    <source src="img/yajanaVideoElida.mp4" type="video/mp4" loop>
+                </video>
             </div>
-            
+
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
@@ -252,11 +242,30 @@
         });
         function playAudioAndGoToSecondSlide() {
             // Reproducir el audio
-            document.getElementById('audio').play();
 
             // Ir al segundo slide
             swiper.slideTo(1); // 1 es el índice del segundo slide
         }
+
+
+        // Añadir un evento al video para pausar el audio cuando el video esté en reproducción
+        video.addEventListener('playing', () => {
+            if (!audio.paused) {
+                audio.pause();
+            }
+        });
+
+
+    </script>
+    <script>
+        // Elementos de audio y video
+        const video = document.getElementById('yajanaVideoElida');
+        const audio = document.getElementById('audio');
+
+        // Pausar el audio cuando se reproduce el video
+        video.addEventListener('play', function() {
+            audio.pause();
+        });
     </script>
     <script src="bgift.js"></script>
 </body>
